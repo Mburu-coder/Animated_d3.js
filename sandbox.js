@@ -10,8 +10,8 @@ var projection = d3.geoMercator()
     .translate([ width/2, height/2 ])
 
 d3.queue()
-  .defer(d3.json, "/kenya.geojson")  // Kenya shape
-  .defer(d3.csv, "/Population in Kenyan Urban centres 2020.csv") // Position of circles
+  .defer(d3.json, "https://raw.githubusercontent.com/Mburu-coder/Animated_d3.js/master/kenya.geojson")  // Kenya shape
+  .defer(d3.csv, "https://raw.githubusercontent.com/Mburu-coder/Animated_d3.js/master/Population%20in%20Kenyan%20Urban%20centres%202020.csv") // Position of circles
   .await(ready);
 
 function ready(error, dataGeo, data) {
